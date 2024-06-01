@@ -9,3 +9,7 @@
 .reveal sourceCode code {
     height: 90%;
 }
+
+.reveal pre.sourceCode code {
+    max-height: 650px;
+}

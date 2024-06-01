@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Shiny for Python Workshop / Newcastle 2023"
+  title: "Intro to Shiny for Python / Conf(2024)"
   navbar:
     logo: https://d33wubrfki0l68.cloudfront.net/71003073848110093780ea9a1c721439ad6b64f3/655ba/shiny-for-python.svg
     search: true
@@ -54,28 +54,28 @@ website:
               - exercises/6-reactive-event.qmd
               - exercises/7-reactive-effects.qmd
 
-    - title: "Bonus Material"
-      contents:
-      - docs/bonus.qmd
-      - section: "UI Customization"
-        contents:
-          - href: slides/ui-customization.qmd
-            text: Slides
-          - section: "Exercises"
-            contents: 
-            - exercises/8-navsets.qmd
-            - exercises/9-cards.qmd
-            - exercises/10-layout.qmd
-            - exercises/11-value-boxes.qmd
-            - exercises/12-dynamic-ui.qmd
-      - section: "Best practices"
-        contents:
-          - href: slides/workflow-best-practices.qmd
-            text: Slides
-          - section: "Exercises"
-            contents: 
-            - exercises/13-ui-functions.qmd
-            - exercises/14-extract-functions.qmd
+    # - title: "Bonus Material"
+    #   contents:
+    #   - docs/bonus.qmd
+        - section: "UI Customization"
+          contents:
+            - href: slides/ui-customization.qmd
+              text: Slides
+            - section: "Exercises"
+              contents: 
+              - exercises/8-navsets.qmd
+              - exercises/9-cards.qmd
+              - exercises/10-layout.qmd
+              - exercises/11-value-boxes.qmd
+              - exercises/12-dynamic-ui.qmd
+        - section: "Best practices"
+          contents:
+            - href: slides/workflow-best-practices.qmd
+              text: Slides
+            - section: "Exercises"
+              contents: 
+              - exercises/13-ui-functions.qmd
+              - exercises/14-extract-functions.qmd
 
       # - title: References
       #   contents:

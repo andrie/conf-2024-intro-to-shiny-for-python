@@ -22,8 +22,9 @@ class QuartoPrint(list):
             self.append(app_contents)
 
 
+
 def list_files(path: str) -> list:
-    files = glob.glob(path + "/**", recursive=True)
+    files = glob.glob((path / "**").as_posix(), recursive=True)
     files = [file for file in files if not glob.os.path.isdir(file)]
     return files
 
@@ -69,7 +70,8 @@ def _include_shiny_folder(
 
     exclude_list = ["__pycache__"] + [file_name] + exclusions
 
-    files = list_files(path)
+    files = list_files(folder_path)
+    print(files)
 
     path_list = [
         string
@@ -77,7 +79,12 @@ def _include_shiny_folder(
         if not any(exclusion in string for exclusion in exclude_list)
     ]
 
+    
     file_names = [string.replace(f"{str(folder_path)}/", "") for string in path_list]
+    # print(path_list)
+    # print(f"folder_path: {str(folder_path)}")
+    # file_names = [os.path.basename(string) for string in path_list]
+    # print(file_names)
 
     # Additional files need to start with ## file:
     for x, y in zip(path_list, file_names):
@@ -177,7 +184,7 @@ class Quiz(dict):
 
 
 def multiple_choice_app(questions: Quiz):
-    questions = Quiz(questions)
+    exquestions = Quiz(questions)
     temp_dir = tempfile.mkdtemp("temp_folder")
     shutil.copy("apps/utilities/multiple-choice/app.py", temp_dir)
     with open(os.path.join(temp_dir, "questions.json"), "w") as file:

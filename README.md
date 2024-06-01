@@ -1,6 +1,6 @@
-# shiny-python-workshop-2023
+# Intro to Shiny for Python / Posit Conf::20204
 
-This is the repository for the Shiny for Python workshop at Shiny in Production, Newcastle, 2023.
+This is the repository for the "Intro to Shiny for Python" workshop Posit Conf 2024.
 
 
 ## For students
