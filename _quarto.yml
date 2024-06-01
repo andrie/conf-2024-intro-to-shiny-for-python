@@ -15,13 +15,9 @@ website:
       - text: "Course material"
         file: docs/course.qmd
 
-      - text: Bonus material
-        file: docs/bonus.qmd
-      - text: References
-        file: docs/references.qmd
     tools: 
       - icon: github
-        href: https://andrie.github.io/shiny-python-workshop-newcastle/
+        href: https://github.com/andrie/conf-2024-intro-to-shiny-for-python
       - icon: discord
         href: https://discord.gg/AQVJzG2bnN
 
