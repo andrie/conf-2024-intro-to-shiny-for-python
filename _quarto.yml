@@ -22,17 +22,13 @@ website:
         href: https://discord.gg/AQVJzG2bnN
 
   sidebar:
-      # - href: index.qmd
-      #   text: Home
-      # - docs/pre-requisites.qmd 
-      # - href: docs/housekeeping.qmd
-      #   text: Housekeeping
     - title: "Course material"
+      collapse-level: 4
       contents:
         - docs/course.qmd
         - section: "Getting Started"
-          contents:
-            - href: slides/getting-started.qmd
+          contents:      
+            - href: docs/getting-started-slides.qmd
               text: Slides
             - section: "Exercises"
               contents: 
@@ -42,7 +38,7 @@ website:
               - exercises/4-add-plot.qmd
         - section: "Reactivity"
           contents:
-            - href: slides/reactivity.qmd
+            - href: docs/reactivity-slides.qmd
               text: Slides
             - section: "Exercises"
               contents: 
@@ -50,12 +46,9 @@ website:
               - exercises/6-reactive-event.qmd
               - exercises/7-reactive-effects.qmd
 
-    # - title: "Bonus Material"
-    #   contents:
-    #   - docs/bonus.qmd
         - section: "UI Customization"
           contents:
-            - href: slides/ui-customization.qmd
+            - href: docs/ui-customization-slides.qmd
               text: Slides
             - section: "Exercises"
               contents: 
@@ -66,17 +59,12 @@ website:
               - exercises/12-dynamic-ui.qmd
         - section: "Best practices"
           contents:
-            - href: slides/workflow-best-practices.qmd
+            - href: docs/best-practices-slides.qmd
               text: Slides
             - section: "Exercises"
               contents: 
               - exercises/13-ui-functions.qmd
               - exercises/14-extract-functions.qmd
-
-      # - title: References
-      #   contents:
-      #     - docs/references.qmd
-
 
 filters:
   - shinylive

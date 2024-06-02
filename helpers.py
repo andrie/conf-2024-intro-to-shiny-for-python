@@ -22,9 +22,8 @@ class QuartoPrint(list):
             self.append(app_contents)
 
 
-
 def list_files(path: str) -> list:
-    files = glob.glob((path / "**").as_posix(), recursive=True)
+    files = glob.glob(path + "/**", recursive=True)
     files = [file for file in files if not glob.os.path.isdir(file)]
     return files
 
@@ -70,8 +69,7 @@ def _include_shiny_folder(
 
     exclude_list = ["__pycache__"] + [file_name] + exclusions
 
-    files = list_files(folder_path)
-    print(files)
+    files = list_files(path)
 
     path_list = [
         string
@@ -79,12 +77,7 @@ def _include_shiny_folder(
         if not any(exclusion in string for exclusion in exclude_list)
     ]
 
-    
     file_names = [string.replace(f"{str(folder_path)}/", "") for string in path_list]
-    # print(path_list)
-    # print(f"folder_path: {str(folder_path)}")
-    # file_names = [os.path.basename(string) for string in path_list]
-    # print(file_names)
 
     # Additional files need to start with ## file:
     for x, y in zip(path_list, file_names):
@@ -115,9 +108,27 @@ def parse_readme(path: str) -> str:
     return file_contents
 
 
-def problem_tabs(path: str) -> None:
+def problem_tabs(folder_name: str) -> None:
+
+    import os
+
+    def find_problem_set_folder(base_path, target_path):
+        for root, dirs, files in os.walk(base_path):
+            for name in dirs:
+                full_path = os.path.join(root, name)
+                if target_path in full_path:
+                    return full_path
+        raise FileNotFoundError(
+            f"Folder matching path '{target_path}' not found in '{base_path}'."
+        )
+
+    path = find_problem_set_folder("apps/problem-sets", folder_name)
+
+    formatted_title = "## " + folder_name.replace("-", " ").title()
+
     block = QuartoPrint(
         [
+            formatted_title,
             "::::: {.column-screen-inset}",
             "::: {.panel-tabset}",
             "## Goal",
@@ -143,6 +154,11 @@ def problem_tabs(path: str) -> None:
     block.extend(
         _include_shiny_folder(path, "app-solution.py", exclusions=["app.py", "README"])
     )
+    block.append("## {{< bi github >}}")
+    block.append(
+        f"The source code for this exercise is [here](https://github.com/posit-dev/shiny-python-workshop-2023/tree/main/{path})."
+    )
+
     block.append(":::")
     block.append(":::::")
     print(block)
@@ -184,7 +200,7 @@ class Quiz(dict):
 
 
 def multiple_choice_app(questions: Quiz):
-    exquestions = Quiz(questions)
+    questions = Quiz(questions)
     temp_dir = tempfile.mkdtemp("temp_folder")
     shutil.copy("apps/utilities/multiple-choice/app.py", temp_dir)
     with open(os.path.join(temp_dir, "questions.json"), "w") as file:
