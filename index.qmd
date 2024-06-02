@@ -1,0 +1,19 @@
+
+## Introduction
+
+This is the workshop website for the "Intro to Shiny for Python" Workshop at [Posit::Conf(2024)](https://posit.co/conference/).
+
+While most of these materials are designed to be used in conjunction with the workshop, they also stand alone as an educational resource.
+
+
+## Background
+
+This workshop is aimed at people who are somewhat familiar with doing data analysis in Python, but do not have much of a background in Shiny. 
+
+If you are brand new to Python we recommend spending a bit of time familiarizing yourself with the following topics before the workshop: 
+
+- How to install Python packages in a virtual environment 
+- How to do basic data manipulation with `pandas` or `polars`
+- How to draw plots 
+- How to clone a repository with git
+
