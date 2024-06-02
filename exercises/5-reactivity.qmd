@@ -16,7 +16,7 @@ def reactive_problems(file):
 
 ```
 
-# Exercise 2.2
+## Exercise 2.2
 
 ```{python}
 # | echo: false
@@ -25,6 +25,6 @@ def reactive_problems(file):
 reactive_problems("2.2-reactive-calc")
 ```
 
-# Exercise 2.3
+## Exercise 2.3
 
 Draw the reactive graph for the above application
