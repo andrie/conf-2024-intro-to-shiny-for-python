@@ -1,6 +1,9 @@
 project:
   type: website
 
+execute:
+  freeze: auto
+
 website:
   title: "Intro to Shiny for Python / Conf(2024)"
   navbar:
