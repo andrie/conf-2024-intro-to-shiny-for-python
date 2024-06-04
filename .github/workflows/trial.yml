@@ -2,7 +2,7 @@
 on:
   workflow_dispatch:
 
-name: Quarto render and publish
+name: Trial
 
 jobs:
   build-deploy:
