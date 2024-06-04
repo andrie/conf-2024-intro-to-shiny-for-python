@@ -1,11 +1,9 @@
 on:
   workflow_dispatch:
   push:
-    branches: 
-    - main
+    branches: main
 
 name: Quarto render and publish
-
 
 jobs:
   build-deploy:
