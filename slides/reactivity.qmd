@@ -24,7 +24,7 @@ format:
 import os
 
 os.chdir("../")
-from helpers import problem_tabs, include_shiny_folder, Quiz, multiple_choice_app
+from helpers import problem_tabs_core, include_shiny_folder, Quiz, multiple_choice_app
 
 ```
 
@@ -37,7 +37,7 @@ from helpers import problem_tabs, include_shiny_folder, Quiz, multiple_choice_ap
 # | echo: false
 # | output: asis
 include_shiny_folder(
-    "apps/problem-sets/1-getting-started/1.10-add-plot",
+    "apps/core/1-getting-started/1.10-add-plot",
     file_name="app-solution.py",
     exclusions=["app.py"],
     components="viewer",
@@ -160,7 +160,7 @@ Draw the graph of this application
 # | echo: false
 # | output: asis
 include_shiny_folder(
-    "apps/problem-sets/1-getting-started/1.10-add-plot",
+    "apps/core/1-getting-started/1.10-add-plot",
     file_name="app-solution.py",
     exclusions=["app.py"],
     components="viewer",
@@ -684,7 +684,7 @@ flowchart TD
 
 ## Your turn
 
-Go to [exercises/5-reactivity](../exercises/5-reactivity.html) or run `apps/problem-sets/exercises/5-reactivity` locally.
+Go to [exercises/5-reactivity](../exercises/5-reactivity.html) or run `apps/core/exercises/5-reactivity` locally.
 
 
 ## Exercise 2.3 answer 
@@ -715,7 +715,7 @@ flowchart TD
 # | echo: false
 # | output: asis
 include_shiny_folder(
-    "apps/problem-sets/2-reactivity/2.3-reactive-event",
+    "apps/core/2-reactivity/2.3-reactive-event",
     file_name="app-solution.py",
     exclusions=["app.py"],
     components="viewer",
@@ -739,7 +739,7 @@ def txt():
 
 ## Your turn
 
-Go to [exercises/6-reactive-event](../exercises/6-reactive-event.html) or run `apps/problem-sets/2-reactivity/2.3-reactive-event` locally.
+Go to [exercises/6-reactive-event](../exercises/6-reactive-event.html) or run `apps/core/2-reactivity/2.3-reactive-event` locally.
 
 
 # Side effects
@@ -855,4 +855,4 @@ multiple_choice_app(questions)
 
 ## Your turn
 
-Go to [exercises/7-reactive-effects](../exercises/7-reactive-effects.html) or run `apps/problem-sets/3-reactive-effects/3.1-update-slider` locally.
+Go to [exercises/7-reactive-effects](../exercises/7-reactive-effects.html) or run `apps/core/3-reactive-effects/3.1-update-slider` locally.

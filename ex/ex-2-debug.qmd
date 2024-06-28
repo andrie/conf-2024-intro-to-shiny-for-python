@@ -7,11 +7,11 @@ title: "Debugging rendering"
 import os
 
 os.chdir("..")
-from helpers import problem_tabs
+from helpers import problem_tabs_core, problem_tabs_express
 
 
 def gs_problems(file):
-    problem_tabs(f"apps/problem-sets/1-getting-started/{file}")
+    problem_tabs_core(f"1-getting-started/{file}")
 
 
 ```
@@ -21,7 +21,7 @@ def gs_problems(file):
 # | echo: false
 # | output: asis
 
-problem_tabs("apps/problem-sets/1-getting-started/1.1-data-frame")
+problem_tabs_core("1-getting-started/1.1-data-frame")
 ```
 
 # Exercise 1.2 - Debug

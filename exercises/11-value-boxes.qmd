@@ -6,11 +6,12 @@ title: "Value boxes"
 import os
 
 os.chdir("..")
-from helpers import problem_tabs
+from helpers import problem_tabs_core, problem_tabs_express
+
 
 
 def ui_tabs(file):
-    problem_tabs(f"apps/problem-sets/4-ui-customization/{file}")
+    problem_tabs_core(f"4-ui-customization/{file}")
 
 
 ```

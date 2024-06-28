@@ -166,3 +166,7 @@ _site
 site_libs
 
 /.luarc.json
+
+
+# gimp
+*.xcf

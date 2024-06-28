@@ -7,7 +7,8 @@ code-annotations: hover
 # | echo: false
 import os
 os.chdir("..")
-from helpers import problem_tabs, include_shiny_folder, Quiz, multiple_choice_app
+from helpers import problem_tabs_core, problem_tabs_express
+, include_shiny_folder, Quiz, multiple_choice_app
 ```
 
 
@@ -52,7 +53,7 @@ While Shinylive is great, it likely isn't the environment you'll use to develop 
 7)  Install the relevant packages with `pip install -r requirements.txt`
 
 All of the example apps are stored in the `/apps` directory. 
-The examples are in `apps/examples` and the problem sets are in `apps/problem-sets`. 
+The examples are in `apps/examples` and the problem sets are in `apps/core`. 
 If you've installed the Shiny for Python VS Code extension, you can run any of the apps by opening the `app.py` file and clicking the play button in the top right. ([See screenshot](https://camo.githubusercontent.com/5d947e6dff7d74fd1cf221e79583105c42e4986ae673ce79733ce5edbfdcdda5/68747470733a2f2f7368696e792e7273747564696f2e636f6d2f70792f646f63732f6173736574732f7673636f64652e706e67))
 
 Alternatively, run them from the command line with `shiny run <path-to-app.py> --reload`.

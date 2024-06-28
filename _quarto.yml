@@ -1,8 +1,8 @@
 project:
   type: website
 
-execute:
-  freeze: auto
+# execute:
+#   freeze: auto
 
 website:
   title: "Intro to Shiny for Python / Conf(2024)"
@@ -29,6 +29,18 @@ website:
       collapse-level: 4
       contents:
         - docs/course.qmd
+        - section: "Shiny express"
+          contents:      
+            - href: docs/shiny-express.qmd
+              text: Slides
+            - section: "Exercises"
+              contents: 
+              - exercises/express-1-hello-world.qmd
+              - exercises/express-2-basic-ui.qmd
+              - exercises/express-3-reactivity.qmd
+              - exercises/express-4-dynamic-ui.qmd
+              - exercises/express-5-reactive-effect.qmd
+
         - section: "Getting Started"
           contents:      
             - href: docs/getting-started-slides.qmd

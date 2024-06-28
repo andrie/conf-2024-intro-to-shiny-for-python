@@ -47,6 +47,7 @@ def _include_shiny_folder(
     path: str,
     file_name: str = "app.py",
     exclusions: list = [],
+    # components: str = "editor, viewer, terminal",
     components: str = "editor, viewer",
     viewer_height: str = "800",
     extra_object: any = "",
@@ -107,22 +108,33 @@ def parse_readme(path: str) -> str:
         file_contents = file.read()
     return file_contents
 
+def problem_tabs_core(folder_name:str) -> None:
+    return problem_tabs(folder_name, express=False)
 
-def problem_tabs(folder_name: str) -> None:
+def problem_tabs_express(folder_name:str) -> None:
+    return problem_tabs(folder_name, express=True)
+
+def problem_tabs(folder_name: str, express = False) -> None:
 
     import os
 
-    def find_problem_set_folder(base_path, target_path):
-        for root, dirs, files in os.walk(base_path):
+    def find_problem_set_folder(base_path, target_path, express = False):
+        base_path = Path(base_path)
+        secondary_path = "express" if express else "core"
+        search_path = Path(base_path)/secondary_path
+        for root, dirs, files in os.walk(search_path):
             for name in dirs:
                 full_path = os.path.join(root, name)
                 if target_path in full_path:
                     return full_path
         raise FileNotFoundError(
-            f"Folder matching path '{target_path}' not found in '{base_path}'."
+            f"Folder matching path '{target_path}' not found in '{search_path}'."
         )
 
-    path = find_problem_set_folder("apps/problem-sets", folder_name)
+    if (express):
+        path = find_problem_set_folder("apps", folder_name, express=True)
+    else:
+        path = find_problem_set_folder("apps", folder_name, express = False)
 
     formatted_title = "## " + folder_name.replace("-", " ").title()
 
@@ -147,16 +159,25 @@ def problem_tabs(folder_name: str) -> None:
     block.append("## Problem")
     block.extend(collapse_prompt(prompt))
     block.extend(
-        _include_shiny_folder(path, "app.py", exclusions=["app-solution.py", "README"])
+        _include_shiny_folder(
+            path, 
+            "app.py", 
+            exclusions=["app-solution.py", "README"]
+        )
     )
     block.append("## Solution")
     block.extend(collapse_prompt(prompt))
     block.extend(
-        _include_shiny_folder(path, "app-solution.py", exclusions=["app.py", "README"])
+        _include_shiny_folder(
+            path, 
+            "app-solution.py", 
+            exclusions=["app.py", "README"]
+        )
     )
     block.append("## {{< bi github >}}")
     block.append(
-        f"The source code for this exercise is [here](https://github.com/posit-dev/shiny-python-workshop-2023/tree/main/{path})."
+        f"The source code for this exercise is [here]"
+        f"(https://github.com/posit-dev/shiny-python-workshop-2023/tree/main/{path})."
     )
 
     block.append(":::")

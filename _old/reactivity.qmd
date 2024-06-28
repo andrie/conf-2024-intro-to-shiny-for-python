@@ -7,7 +7,8 @@ code-annotations: hover
 import os
 
 os.chdir("..")
-from helpers import problem_tabs, include_shiny_folder
+from helpers import problem_tabs_core, problem_tabs_express
+, include_shiny_folder
 ```
 # The reactive graph
 
@@ -37,7 +38,7 @@ For the purposes of this course, we'll put the computation graphs to the right o
 #| echo: false
 #| output: asis  
  include_shiny_folder(
-     "apps/problem-sets/1-getting-started/1.10-add-plot", file_name="app-solution.py", exclusions=["app.py"]
+     "apps/core/1-getting-started/1.10-add-plot", file_name="app-solution.py", exclusions=["app.py"]
  )
 ```
 :::
@@ -248,7 +249,7 @@ Currently all three elemenets in the app call the slow sampling function, which 
 ```{python}
 #| echo: false
 #| output: asis  
-problem_tabs("apps/problem-sets/2-reactivity/2.2-reactive-calc")
+problem_tabs_core("2-reactivity/2.2-reactive-calc")
 ```
 :::
 

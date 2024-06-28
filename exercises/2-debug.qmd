@@ -7,12 +7,29 @@ title: "Debugging rendering"
 import os
 
 os.chdir("..")
-from helpers import problem_tabs
+from helpers import problem_tabs_core, problem_tabs_express
+
 
 
 def gs_problems(file):
-    problem_tabs(f"apps/problem-sets/1-getting-started/{file}")
+    problem_tabs_core(f"1-getting-started/{file}")
 
+
+```
+## testing testing testing
+
+```{shinylive-python}
+#| viewerHeight: 600
+#| components: [editor, viewer, terminal]
+#| standalone: true
+from shiny.express import input, render, ui
+
+ui.input_slider("n", "N", 0, 100, 20)
+
+
+@render.code
+def txt():
+    return f"n*2 is {input.n() * 2}"
 
 ```
 
@@ -21,16 +38,19 @@ def gs_problems(file):
 # | echo: false
 # | output: asis
 
-problem_tabs("apps/problem-sets/1-getting-started/1.1-data-frame")
+problem_tabs_core("1-getting-started/1.1-data-frame")
 ```
 
 ## Exercise 1.2 - Debug
+
 
 ```{python}
 # | echo: false
 # | output: asis
 
-gs_problems("1.2-debug")
+# gs_problems("1.2-debug")
+
+problem_tabs_core("1-getting-started/1.2-debug")
 ```
 
 

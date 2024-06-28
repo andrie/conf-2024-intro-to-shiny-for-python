@@ -6,11 +6,12 @@ title: "Reactive effects"
 import os
 
 os.chdir("..")
-from helpers import problem_tabs
+from helpers import problem_tabs_core, problem_tabs_express
+
 
 
 def reactive_problems(file):
-    problem_tabs(f"apps/problem-sets/3-reactive-effects/{file}")
+    problem_tabs_core(f"3-reactive-effects/{file}")
 
 
 ```

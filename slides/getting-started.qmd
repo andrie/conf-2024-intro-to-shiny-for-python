@@ -25,7 +25,7 @@ format:
 import os
 
 os.chdir("..")
-from helpers import problem_tabs, include_shiny_folder
+from helpers import problem_tabs_core, problem_tabs_express, include_shiny_folder
 
 ```
 
@@ -41,7 +41,7 @@ from helpers import problem_tabs, include_shiny_folder
 
 -   This session is going to be exercise based
 -   All of the exercises and slides are running live on the [website](https://posit-dev.github.io/shiny-python-workshop-2023/)
--   You can do them on the website or open the apps in the `apps/problem-sets` folder
+-   You can do them on the website or open the apps in the `apps/core` folder
 -   If you need help, put a red sticker on your laptop; when you're done, put up a green sticker
 
 ## Testing your setup
@@ -170,7 +170,7 @@ app = App(app_ui, server)
 
 ## Your turn
 
-Go to [exercises/1-hello-world](../exercises/1-hello-world.html) or run `apps/problem-sets/1-getting-started/1.0-hello-world` locally.
+Go to [exercises/1-hello-world](../exercises/1-hello-world.html) or run `apps/core/1-getting-started/1.0-hello-world` locally.
 
 ## Server function
 

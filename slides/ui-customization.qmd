@@ -23,7 +23,7 @@ format:
 import os
 
 os.chdir("..")
-from helpers import problem_tabs, include_shiny_folder, Quiz, multiple_choice_app
+from helpers import problem_tabs_core, problem_tabs_express, include_shiny_folder, Quiz, multiple_choice_app
 
 ```
 
@@ -48,7 +48,7 @@ from helpers import problem_tabs, include_shiny_folder, Quiz, multiple_choice_ap
 # | echo: false
 # | output: asis
 include_shiny_folder(
-    "apps/problem-sets/4-ui-customization/4.7-conditional-panel",
+    "apps/core/4-ui-customization/4.7-conditional-panel",
     file_name="app-solution.py",
     exclusions=["app.py"],
     components="viewer",
@@ -179,7 +179,7 @@ include_shiny_folder(
 
 ## Your turn
 
-Go to [exercises/8-navsets](../exercises/8-navsets.html) or run `apps/problem-sets/exercises/4-ui-customization/4.1-tabs` locally.
+Go to [exercises/8-navsets](../exercises/8-navsets.html) or run `apps/core/exercises/4-ui-customization/4.1-tabs` locally.
 
 
 ## Cards
@@ -216,7 +216,7 @@ include_shiny_folder(
 
 ## Your turn
 
-Go to [exercises/9-cards](../exercises/9-cards.html) or run `apps/problem-sets/exercises/4-ui-customization/4.2-cards` locally.
+Go to [exercises/9-cards](../exercises/9-cards.html) or run `apps/core/exercises/4-ui-customization/4.2-cards` locally.
 
 
 ## Rows and columns
@@ -310,7 +310,7 @@ ui = ui.fluid_page(ui.navset_tab(tab1, tab2, tab3))
 
 ## Your turn
 
-Go to [exercises/10-layout](../exercises/10-layout.html) or run `apps/problem-sets/exercises/4-ui-customization/4.3-layout` locally.
+Go to [exercises/10-layout](../exercises/10-layout.html) or run `apps/core/exercises/4-ui-customization/4.3-layout` locally.
 
 ## Review: Value boxes
 
@@ -322,7 +322,7 @@ Go to [exercises/10-layout](../exercises/10-layout.html) or run `apps/problem-se
 
 ## Your turn
 
-Go to [exercises/11-value-boxes](../exercises/11-value-boxes.html) or run `apps/problem-sets/exercises/4-ui-customization/4.5-value-boxes` locally.
+Go to [exercises/11-value-boxes](../exercises/11-value-boxes.html) or run `apps/core/exercises/4-ui-customization/4.5-value-boxes` locally.
 
 ## Dynamic user interfaces
 
@@ -467,7 +467,7 @@ app = App(app_ui, server)
 
 ## Your turn
 
-Go to [exercises/12-layout](../exercises/12-layout.html) or run problems `4.6` and `4.7` in `apps/problem-sets/exercises/4-ui-customization/`.
+Go to [exercises/12-layout](../exercises/12-layout.html) or run problems `4.6` and `4.7` in `apps/core/exercises/4-ui-customization/`.
 
 
 ## That's a lot of stuff!

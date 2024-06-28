@@ -157,7 +157,7 @@ include_shiny_folder("apps/examples/1.4-table-graph-input-slider")
 # | echo: false
 # | output: asis
 
-problem_tabs("apps/problem-sets/1-getting-started/1.10-add-plot")
+problem_tabs_core("1-getting-started/1.10-add-plot")
 ```
 
 # Summary

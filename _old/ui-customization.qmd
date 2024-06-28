@@ -7,7 +7,8 @@ code-annotations: hover
 import os
 
 os.chdir("..")
-from helpers import problem_tabs, include_shiny_folder
+from helpers import problem_tabs_core, problem_tabs_express
+, include_shiny_folder
 ```
 
 In the previous sections you built a functional shiny app, and developed some intution about how reactive programming works, but the app itself isn't laid out very well. 
