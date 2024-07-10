@@ -509,7 +509,7 @@ with ui.layout_columns():
         ui.card_header("Model Metrics")
 
         @render_plotly
-        def metric():
+        def metric_plot():
             if input.metric() == "ROC Curve":
                 return plot_auc_curve(
                     character_filter(), "is_electronics", "training_score"
@@ -527,7 +527,6 @@ with ui.layout_columns():
         @render_plotly
         def score_dist():
             return plot_score_distribution(character_filter())
-
 ## file: simulated-data.csv
 id,account,text,date,is_electronics,training_score,prod_score,sub_account
 0,Berge &amp; Berge,"Forestone 2nd Gen MP4 Player with Voice Recorder/FM Radio/Video/Music Player for Android/iOS Devices Product Description&nbsp; Portable Mp3 Mp4 player, video player, music player, media player, audio player with photo viewer, E-book reader, voice recorder, games and movies. This is not an apple product and does not support iTunes. 1. 8 inch TFT LCD, full color display support AMV video, built-in game, digital record function, flash disk storage function, E-book function, support text file. 1. 78 inch high resolution real color LCD screen. This has no inbuilt memory so please use one external memory card of any size upto 32 GB. 2nd mp4 inspire you to listen music on it and it is very easy to play music having many functions which you can set by your choice like touch the key to play the songs then you can run this program smoothly without selecting one after other for this just make a playlist and add your favorite songs in it to play then you can enjoy your work without any disturbance. Highlight Built-in polymer Lithium batterY &gt;A-B repeat function &gt;Comes with FM radio stereo radio &gt;Built-in loudspeaker (optional) &gt;Supports audio formats: MP3 player, WMA, WMV and WAV &gt;Supports video formats: 3GP, MP4 player, AVI ONE YEAR REPLACEMENT WARRANTY ON DEFECTIVE PRODUCTS",2023-02-17,1,0.16943726,1.1618205506162425,Code Wranglers
@@ -1682,7 +1681,7 @@ with ui.layout_columns():
         ui.card_header("Model Metrics")
 
         @render_plotly
-        def metric():
+        def metric_plot():
             if input.metric() == "ROC Curve":
                 return plot_auc_curve(
                     character_filter(), "is_electronics", "training_score"
@@ -1700,7 +1699,6 @@ with ui.layout_columns():
         @render_plotly
         def score_dist():
             return plot_score_distribution(character_filter())
-
 ## file: simulated-data.csv
 id,account,text,date,is_electronics,training_score,prod_score,sub_account
 0,Berge &amp; Berge,"Forestone 2nd Gen MP4 Player with Voice Recorder/FM Radio/Video/Music Player for Android/iOS Devices Product Description&nbsp; Portable Mp3 Mp4 player, video player, music player, media player, audio player with photo viewer, E-book reader, voice recorder, games and movies. This is not an apple product and does not support iTunes. 1. 8 inch TFT LCD, full color display support AMV video, built-in game, digital record function, flash disk storage function, E-book function, support text file. 1. 78 inch high resolution real color LCD screen. This has no inbuilt memory so please use one external memory card of any size upto 32 GB. 2nd mp4 inspire you to listen music on it and it is very easy to play music having many functions which you can set by your choice like touch the key to play the songs then you can run this program smoothly without selecting one after other for this just make a playlist and add your favorite songs in it to play then you can enjoy your work without any disturbance. Highlight Built-in polymer Lithium batterY &gt;A-B repeat function &gt;Comes with FM radio stereo radio &gt;Built-in loudspeaker (optional) &gt;Supports audio formats: MP3 player, WMA, WMV and WAV &gt;Supports video formats: 3GP, MP4 player, AVI ONE YEAR REPLACEMENT WARRANTY ON DEFECTIVE PRODUCTS",2023-02-17,1,0.16943726,1.1618205506162425,Code Wranglers
@@ -2867,7 +2865,7 @@ with ui.layout_columns():
         ui.card_header("Model Metrics")
 
         @render_plotly
-        def metric():
+        def metric_plot():
             if input.metric() == "ROC Curve":
                 return plot_auc_curve(
                     character_filter(), "is_electronics", "training_score"
@@ -2885,7 +2883,6 @@ with ui.layout_columns():
         @render_plotly
         def score_dist():
             return plot_score_distribution(character_filter())
-
 ## file: simulated-data.csv
 id,account,text,date,is_electronics,training_score,prod_score,sub_account
 0,Berge &amp; Berge,"Forestone 2nd Gen MP4 Player with Voice Recorder/FM Radio/Video/Music Player for Android/iOS Devices Product Description&nbsp; Portable Mp3 Mp4 player, video player, music player, media player, audio player with photo viewer, E-book reader, voice recorder, games and movies. This is not an apple product and does not support iTunes. 1. 8 inch TFT LCD, full color display support AMV video, built-in game, digital record function, flash disk storage function, E-book function, support text file. 1. 78 inch high resolution real color LCD screen. This has no inbuilt memory so please use one external memory card of any size upto 32 GB. 2nd mp4 inspire you to listen music on it and it is very easy to play music having many functions which you can set by your choice like touch the key to play the songs then you can run this program smoothly without selecting one after other for this just make a playlist and add your favorite songs in it to play then you can enjoy your work without any disturbance. Highlight Built-in polymer Lithium batterY &gt;A-B repeat function &gt;Comes with FM radio stereo radio &gt;Built-in loudspeaker (optional) &gt;Supports audio formats: MP3 player, WMA, WMV and WAV &gt;Supports video formats: 3GP, MP4 player, AVI ONE YEAR REPLACEMENT WARRANTY ON DEFECTIVE PRODUCTS",2023-02-17,1,0.16943726,1.1618205506162425,Code Wranglers
