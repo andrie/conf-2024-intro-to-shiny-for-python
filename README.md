@@ -5,7 +5,7 @@ This is the repository for the "Intro to Shiny for Python" workshop Posit Conf 2
 
 ## For students
 
-If you're a student, please visit the course pages at https://github.com/andrie/shiny-python-workshop-newcastle
+If you're a student, please visit the course pages at https://andrie.github.io/conf-2024-intro-to-shiny-for-python/
 
 ## Installation - for instructors only
 
